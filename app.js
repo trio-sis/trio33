@@ -453,8 +453,9 @@ function registerEventListeners() {
   });
 
   // Main & Sticky Order CTAs
-  DOM.whatsappOrderBtn.addEventListener("click", submitOrder);
-  DOM.mobileStickyCta.addEventListener("click", submitOrder);
+  if (DOM.whatsappOrderBtn) DOM.whatsappOrderBtn.addEventListener("click", submitOrder);
+  if (DOM.mobileStickyCta) DOM.mobileStickyCta.addEventListener("click", submitOrder);
+  if (DOM.mobileStickyOrderBtn) DOM.mobileStickyOrderBtn.addEventListener("click", submitOrder);
 
   // Slider buttons listeners
   setupSlidersNav();
@@ -1333,21 +1334,12 @@ function submitOrder() {
   const prod = state.currentModalProduct;
   if (!prod) return;
 
-  // Validation
-  if (!state.selectedColor) {
-    alert("برجاء اختيار اللون المطلوب أولاً");
-    return;
-  }
+  // Smart defaults fallback to ensure instant order flow without blocking alerts
+  const selectedColor = state.selectedColor || prod.colors[0]?.name || "اللون الرئيسي";
+  const selectedSize = state.selectedSize || prod.sizes[0] || "فري سايز";
+  const qty = state.quantity || 1;
 
-  if (!state.selectedSize) {
-    alert("برجاء اختيار المقاس المطلوب أولاً");
-    // Shake animation on size section for accessibility UI cues
-    DOM.modalSizeOptions.parentElement.classList.add("shake-error");
-    setTimeout(() => DOM.modalSizeOptions.parentElement.classList.remove("shake-error"), 500);
-    return;
-  }
-
-  // Construct message
+  // Construct formatted Arabic WhatsApp order text
   const textMessage = `السلام عليكم،
 أرغب في طلب المنتج التالي:
 
@@ -1355,21 +1347,37 @@ function submitOrder() {
 ${prod.name}
 
 اللون:
-${state.selectedColor}
+${selectedColor}
 
 المقاس:
-${state.selectedSize}
+${selectedSize}
 
 الكمية:
-${state.quantity}
+${qty}
 
 وأرغب في معرفة تفاصيل الشحن.`;
 
   const encodedMsg = encodeURIComponent(textMessage);
-  const waURL = `https://wa.me/201033766485?text=${encodedMsg}`;
-  
-  // Open directly in current window
-  window.location.href = waURL;
+  // Universal WhatsApp API link (works seamlessly across iOS, Android, and Desktop Web)
+  const waURL = `https://api.whatsapp.com/send?phone=201033766485&text=${encodedMsg}`;
+
+  // Method 1: Create native <a> element click for maximum mobile & app deep-link compatibility
+  try {
+    const tempLink = document.createElement("a");
+    tempLink.href = waURL;
+    tempLink.target = "_blank";
+    tempLink.rel = "noopener noreferrer";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    setTimeout(() => {
+      if (tempLink.parentNode) {
+        document.body.removeChild(tempLink);
+      }
+    }, 300);
+  } catch (e) {
+    // Fallback: Direct location shift
+    window.location.href = waURL;
+  }
 }
 
 // ==========================================
