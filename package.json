@@ -1,0 +1,17 @@
+{
+  "name": "trio-boutique",
+  "version": "1.0.0",
+  "description": "Trio Premium Fashion Boutique Website",
+  "scripts": {
+    "dev": "npx browser-sync start --server --files \"*.html, *.css, *.js\"",
+    "start": "npx browser-sync start --server --files \"*.html, *.css, *.js\""
+  },
+  "keywords": [
+    "trio",
+    "boutique",
+    "fashion",
+    "ecommerce"
+  ],
+  "author": "Trio Boutique",
+  "license": "ISC"
+}
