@@ -19,8 +19,8 @@ const PRODUCTS = [
     description: "لو بتدوري على چيبة شيك ومريحة وتعيش معاكي طول السنة. چيبة مشجرة، مبطنة ومش بتشف، مريحة في اللبس وتنفع لكل المواسم.",
     longDescription: "چيبة مشجرة راقية من تشكيلة Trio الحصرية، مبطنة بالكامل وغير شفافة لتمنحكِ الراحة والأمان. تصميم مريح جداً في اللبس بفضل خاماتها الخفيفة وتصميمها الانسيابي الذي يناسب كل المواسم والوزن من 50 إلى 80 كيلو بكل ثقة.",
     colors: [
-      { name: "موف", hex: "#9A7B9F", image: "assets/skirt_printed_mauve.jpg" },
-      { name: "أخضر", hex: "#4C9E76", image: "assets/skirt_printed_green.jpg" }
+      { name: "موف", hex: "#9A7B9F", image: "https://lh3.googleusercontent.com/d/14WYP4SA7Hws81KujinwUV-qSa76NRHAV" },
+      { name: "أخضر", hex: "#4C9E76", image: "https://lh3.googleusercontent.com/d/1NQ8U9SG97FWGe-LiP1tkFrWgA_q5CdPj" }
     ],
     sizes: ["فري سايز (50 لـ 80 كيلو)"],
     features: [
@@ -37,8 +37,8 @@ const PRODUCTS = [
     newArrival: true,
     dateAdded: "2026-07-20",
     gallery: [
-      "assets/skirt_printed_mauve.jpg",
-      "assets/skirt_printed_green.jpg"
+      "https://lh3.googleusercontent.com/d/14WYP4SA7Hws81KujinwUV-qSa76NRHAV",
+      "https://lh3.googleusercontent.com/d/1NQ8U9SG97FWGe-LiP1tkFrWgA_q5CdPj"
     ]
   },
   {
@@ -53,10 +53,10 @@ const PRODUCTS = [
     description: "سوت شيك ستايل تركي من قطعتين تمنحكِ إطلالة مميزة ومريحة في كل وقت. خامة كتان قطن طبيعي ومقاس مناسب.",
     longDescription: "سوت نسائية شيك جداً بتصميم وستايل تركي راقٍ مكون من قطعتين (بلوزة انسيابية أنيقة مع بنطلون واسع). مصنوعة من خامة كتان قطن طبيعي عالية الجودة تضمن لكِ أعلى درجات الراحة والمرونة في الحركة مع المحافظة على المظهر الشيك والمميز.",
     colors: [
-      { name: "أزرق", hex: "#1F4E5B", image: "assets/suit_turkish_blue.jpg" },
+      { name: "أزرق", hex: "#1F4E5B", image: "https://lh3.googleusercontent.com/d/15epscuA9py6luspjzHlcnrkn_p4rfuxv" },
       { name: "زيتي", hex: "#4F5D2F", image: "assets/suit_turkish_olive.jpg" },
       { name: "بيبي بينك", hex: "#F4C2C2", image: "assets/suit_turkish_pink.jpg" },
-      { name: "بيج", hex: "#E1D0C1", image: "assets/suit_turkish_beige.jpg" }
+      { name: "بيج", hex: "#E1D0C1", image: "https://lh3.googleusercontent.com/d/1DqQCLRl6KfED0HnrM7lOgRoQPAqDVHuC" }
     ],
     sizes: ["فري سايز (50 لـ 80 كيلو)"],
     features: [
@@ -73,10 +73,10 @@ const PRODUCTS = [
     newArrival: true,
     dateAdded: "2026-07-20",
     gallery: [
-      "assets/suit_turkish_blue.jpg",
+      "https://lh3.googleusercontent.com/d/15epscuA9py6luspjzHlcnrkn_p4rfuxv",
       "assets/suit_turkish_olive.jpg",
       "assets/suit_turkish_pink.jpg",
-      "assets/suit_turkish_beige.jpg"
+      "https://lh3.googleusercontent.com/d/1DqQCLRl6KfED0HnrM7lOgRoQPAqDVHuC"
     ]
   },
   {
@@ -91,9 +91,9 @@ const PRODUCTS = [
     description: "عباية قطعة واحدة مفتوحة، ستايلها شيك وبسيط. خامتها ستان جلاكسي تركي تقيلة ومريحة وتظبط الشكل وتعيش معاكي.",
     longDescription: "تألقي بطلة ساحرة وأنيقة مع عباية الستان الجلاكسي التركي الفاخر المفتوحة. تصميم قطعة واحدة بسيط وشيك جداً، مصنوع من خامة ستان جلاكسي تركي تقيلة، مريحة، تظبط شكل الجسم، وتعيش معك طويلاً دون أن تفقد رونقها.",
     colors: [
-      { name: "نبيتي", hex: "#800020", image: "assets/abaya_galaxy_burgundy.jpg" },
-      { name: "كافيه", hex: "#6F4E37", image: "assets/abaya_galaxy_cafe.jpg" },
-      { name: "فيروزي", hex: "#30D5C8", image: "assets/abaya_galaxy_turquoise.jpg" }
+      { name: "نبيتي", hex: "#800020", image: "https://lh3.googleusercontent.com/d/1q-2p4dtY1J_60dGMZto_lzIXKFQ63RdA" },
+      { name: "كافيه", hex: "#6F4E37", image: "https://lh3.googleusercontent.com/d/1YrAQt4jLhNp_mCMU7WRRxggnzrfcSEf4" },
+      { name: "فيروزي", hex: "#30D5C8", image: "https://lh3.googleusercontent.com/d/19nJx3zGdzYz0ANTJo7okWsX7oN6_92VK" }
     ],
     sizes: ["فري سايز"],
     features: [
@@ -110,9 +110,9 @@ const PRODUCTS = [
     newArrival: true,
     dateAdded: "2026-07-20",
     gallery: [
-      "assets/abaya_galaxy_burgundy.jpg",
-      "assets/abaya_galaxy_cafe.jpg",
-      "assets/abaya_galaxy_turquoise.jpg"
+      "https://lh3.googleusercontent.com/d/1q-2p4dtY1J_60dGMZto_lzIXKFQ63RdA",
+      "https://lh3.googleusercontent.com/d/1YrAQt4jLhNp_mCMU7WRRxggnzrfcSEf4",
+      "https://lh3.googleusercontent.com/d/19nJx3zGdzYz0ANTJo7okWsX7oN6_92VK"
     ]
   },
   {
@@ -127,7 +127,7 @@ const PRODUCTS = [
     description: "فستان كل المناسبات بخامة كتان قطن طبيعي مريحة وشيك جداً. متوفر بـ 4 ألوان مميزة ومقاس مريح.",
     longDescription: "فستان كل المناسبات الاستثنائي المصمم ليلائم جميع خروجاتكِ ومناسباتكِ السعيدة الراقية. يتميز بقصة مريحة وأنيقة مع حزام خصر بحلية ذهبية راقية تبرز جمال التصميم، ومصنوع من خامة كتان قطن طبيعي ممتاز تعطي ملمساً ناعماً وتهوية مثالية.",
     colors: [
-      { name: "بيج", hex: "#E5D3BF", image: "assets/dress_eid_beige.jpg" },
+      { name: "بيج", hex: "#E5D3BF", image: "https://lh3.googleusercontent.com/d/1d7zqZqoe_a6t0T5Df5e-5Gtl48U4V7HT" },
       { name: "نبيتي", hex: "#800020", image: "assets/dress_eid_burgundy.jpg" },
       { name: "بني", hex: "#5C4033", image: "assets/dress_eid_brown.jpg" },
       { name: "بيستاشيو", hex: "#93C572", image: "assets/dress_eid_pistachio.jpg" }
@@ -148,7 +148,7 @@ const PRODUCTS = [
     dateAdded: "2026-07-20",
     gallery: [
       "assets/dress_eid_burgundy.jpg",
-      "assets/dress_eid_beige.jpg",
+      "https://lh3.googleusercontent.com/d/1d7zqZqoe_a6t0T5Df5e-5Gtl48U4V7HT",
       "assets/dress_eid_brown.jpg",
       "assets/dress_eid_pistachio.jpg",
       "assets/dress_eid_burgundy_detail.jpg"
@@ -1366,10 +1366,10 @@ ${state.quantity}
 وأرغب في معرفة تفاصيل الشحن.`;
 
   const encodedMsg = encodeURIComponent(textMessage);
-  const waURL = `https://api.whatsapp.com/message/54YRNW43YVJ7K1?autoload=1&app_absent=0&text=${encodedMsg}`;
+  const waURL = `https://wa.me/201033766485?text=${encodedMsg}`;
   
-  // Open in new tab
-  window.open(waURL, "_blank");
+  // Open directly in current window
+  window.location.href = waURL;
 }
 
 // ==========================================
