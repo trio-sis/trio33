@@ -452,6 +452,16 @@ function registerEventListeners() {
     }
   });
 
+  // Meta Pixel Contact Event Tracking for all WhatsApp links & buttons
+  document.addEventListener("click", (e) => {
+    const waElement = e.target.closest("a[href*='wa.me'], a[href*='whatsapp'], .btn-whatsapp-order, .btn-whatsapp-drawer, .floating-whatsapp-btn, .whatsapp-card, .whatsapp-highlight, #whatsappOrderBtn, #mobileStickyCta, #mobileStickyOrderBtn");
+    if (waElement) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact');
+      }
+    }
+  });
+
   // Main & Sticky Order CTAs
   if (DOM.whatsappOrderBtn) DOM.whatsappOrderBtn.addEventListener("click", submitOrder);
   if (DOM.mobileStickyCta) DOM.mobileStickyCta.addEventListener("click", submitOrder);
@@ -1333,6 +1343,11 @@ function renderModalRelatedProducts(currentProd) {
 function submitOrder() {
   const prod = state.currentModalProduct;
   if (!prod) return;
+
+  // Trigger Meta Pixel Contact Event
+  if (typeof fbq === 'function') {
+    fbq('track', 'Contact');
+  }
 
   // Smart defaults fallback to ensure instant order flow without blocking alerts
   const selectedColor = state.selectedColor || prod.colors[0]?.name || "اللون الرئيسي";
