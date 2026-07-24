@@ -452,12 +452,12 @@ function registerEventListeners() {
     }
   });
 
-  // Meta Pixel Contact Event Tracking for all WhatsApp links & buttons
+  // Meta Pixel InitiateCheckout Event Tracking for all WhatsApp links & buttons
   document.addEventListener("click", (e) => {
     const waElement = e.target.closest("a[href*='wa.me'], a[href*='whatsapp'], .btn-whatsapp-order, .btn-whatsapp-drawer, .floating-whatsapp-btn, .whatsapp-card, .whatsapp-highlight, #whatsappOrderBtn, #mobileStickyCta, #mobileStickyOrderBtn");
     if (waElement) {
       if (typeof fbq === 'function') {
-        fbq('track', 'Contact');
+        fbq('track', 'InitiateCheckout');
       }
     }
   });
@@ -1344,9 +1344,9 @@ function submitOrder() {
   const prod = state.currentModalProduct;
   if (!prod) return;
 
-  // Trigger Meta Pixel Contact Event
+  // Trigger Meta Pixel InitiateCheckout Event
   if (typeof fbq === 'function') {
-    fbq('track', 'Contact');
+    fbq('track', 'InitiateCheckout');
   }
 
   // Smart defaults fallback to ensure instant order flow without blocking alerts
